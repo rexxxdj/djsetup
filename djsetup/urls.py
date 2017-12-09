@@ -16,9 +16,13 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from mainpage import views as mainview
+from news import views as newsview
+from about import views as aboutview
 
 urlpatterns = [
 	url(r'^$', mainview.main_page, name='home'),
+	url(r'^news/', newsview.news_list, name='news'),
+	url(r'^about/', aboutview.about_form, name='about'),
 
 	url(r'^admin/', admin.site.urls),    
 ]
