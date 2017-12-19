@@ -6,16 +6,16 @@
 	    <meta name="keywords" content="">
 	    <meta name="description" content="">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-	    <link rel="shortcut icon" type="image/png" href="/static/img/favicon.png">    
-		<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="/static/css/style.css">
-		<link rel="stylesheet" type="text/css" href="/static/css/font-awesome.min.css">
+	    <link rel="shortcut icon" type="image/png" href="{% static "img/favicon.png" %}">    
+		<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "css/font-awesome.min.css" %}">
 		<link href='https://fonts.googleapis.com/css?family=Droid+Sans&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	    
-		<script src="/static/js/jquery-2.1.0.js"></script>
-		<script src="/static/js/bootstrap.js"></script>
-		<script src="/static/js/blocs.js"></script>
-		<script src="/static/js/lazysizes.min.js" defer></script>
+		<script src="{% static "js/jquery-2.1.0.js" %}"></script>
+		<script src="{% static "js/bootstrap.js" %}"></script>
+		<script src="{% static "js/blocs.js" %}"></script>
+		<script src="{% static "js/lazysizes.min.js" %}" defer></script>
 	    <title>Home - DJSETUP</title>    
 	<!-- Google Analytics --> 
 	<!-- Google Analytics END -->    
@@ -29,7 +29,8 @@
 					<nav class="navbar nav-center row">
 						<div class="navbar-header">
 							<a class="navbar-brand" href="index.html"><br></a>
-							<img src="/static/img/logo.png" class="center-block" width="150" height="76" />
+							<img src="{% static "img/logo.png" %}" 
+								 class="center-block" width="150" height="76" />
 							<button id="nav-toggle" type="button" 
 									class="ui-navbar-toggle navbar-toggle" 
 									data-toggle="collapse" data-target=".navbar-1">
@@ -56,8 +57,8 @@
 					<div class="row">
 						<div class="col-sm-12">
 							<img class="img-responsive lazyload" 
-								 src="/static/img/lazyload-ph.png" 
-								 data-src="/static/img/404.jpg" />
+								 src="{% static "img/lazyload-ph.png" %}" 
+								 data-src="{% static "img/404.jpg" %}" />
 						</div>
 					</div>
 				</div>
@@ -79,7 +80,7 @@
 				<div class="container bloc-sm">
 					<div class="row">
 						<div class="col-xs-12 col-md-8 col-md-offset-2">
-							<img src="/static/img/lazyload-ph.png"
+							<img src="{% static "img/lazyload-ph.png" %}"
 								 data-src="{% static n.image %}" 
 								 class="img-responsive lazyload" />
 							<h2 class="mg-sm">{{n.tittle}}</h2>
@@ -87,8 +88,7 @@
 								<div class="col-sm-6"><h4 class="mg-sm">{{n.tags}}</h4></div>
 								<div class="col-sm-6"><h4 class="mg-sm text-right">{{n.date}}</h4></div>
 							</div>
-							<p class="mg-md">{{n.description}}<br>
-							</p>
+							<p class="mg-md">{{n.description}}<br></p>
 							<a href="{% url "detail" n.id %}" class="btn btn-d button pull-left none btn-rd">Подробности<br></a>
 						</div>
 					</div>
