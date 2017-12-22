@@ -1,3 +1,4 @@
+{% load static from staticfiles %}
 <!doctype html>
 <html lang="Default">
 	<head>
@@ -5,17 +6,16 @@
 	    <meta name="keywords" content="">
 	    <meta name="description" content="">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-	    <link rel="shortcut icon" type="image/png" href="/static/img/favicon.png">
-	    
-		<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="/static/css/style.css">
-		<link rel="stylesheet" type="text/css" href="/static/css/font-awesome.min.css">
+	    <link rel="shortcut icon" type="image/png" href="{% static "img/favicon.png" %}">    
+		<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "css/font-awesome.min.css" %}">
 		<link href='https://fonts.googleapis.com/css?family=Droid+Sans&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	    
-		<script src="/static/js/jquery-2.1.0.js"></script>
-		<script src="/static/js/bootstrap.js"></script>
-		<script src="/static/js/blocs.js"></script>
-		<script src="/static/js/lazysizes.min.js" defer></script>
+		<script src="{% static "js/jquery-2.1.0.js" %}"></script>
+		<script src="{% static "js/bootstrap.js" %}"></script>
+		<script src="{% static "js/blocs.js" %}"></script>
+		<script src="{% static "js/lazysizes.min.js" %}" defer></script>
 	    <title>News - DJSETUP</title>    
 	<!-- Google Analytics --> 
 	<!-- Google Analytics END -->    
@@ -28,8 +28,9 @@
 				<div class="container">
 					<nav class="navbar nav-center row">
 						<div class="navbar-header">
-							<a class="navbar-brand" href="index.html"><br></a>
-							<img src="/static/img/logo.png" class="center-block" 
+							<a class="navbar-brand" href="/"><br></a>
+							<img src="{% static "img/logo.png" %}" 
+								 class="center-block" 
 								 width="150" height="76" />
 							<button id="nav-toggle" type="button" 
 									class="ui-navbar-toggle navbar-toggle" 
@@ -56,7 +57,7 @@
 				<div class="container bloc-sm">
 					<div class="row">
 						<div class="col-xs-12 col-md-8 col-md-offset-2">
-							<h2 class="text-center mg-lg">Native Instruments Traktor Scratch Audio 10</h2>
+							<h2 class="text-center mg-lg">{{news.description}}</h2>
 							<img src="/static/img/lazyload-ph.png" 
 								 data-src="/static/img/desk-equipment.jpg" 
 								 class="img-responsive mg-lg lazyload" />

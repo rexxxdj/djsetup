@@ -18,7 +18,9 @@ a:hover{text-decoration: none; cursor:pointer;}
 
 /* = Blocs
 -------------------------------------------------------------- */
-
+.newsdesc {
+    min-height: 180px;
+}
 .bloc{
 	width:100%;
 	clear:both;

@@ -58,13 +58,15 @@
 							<div class="row">
 							{% for n in news %}
 								<div class="col-sm-6">
-									<img src="{% static "img/lazyload-ph.png" %}"
-									     data-src="{% static n.image %}" 
-									     class="img-responsive lazyload" />
+									<a href="{% url "detail" n.id %}">
+										<img src="{% static "img/lazyload-ph.png" %}"
+										     data-src="{% static n.image %}" 
+										     class="img-responsive lazyload" />
+									</a>
 									<h3 class="mg-md">{{n.tittle}}</h3>
 									<div class="col-sm-6"><h4 class="mg-sm">{{n.tags}}</h4></div>
 									<div class="col-sm-6"><h4 class="mg-sm text-right">{{n.date}}</h4></div>
-									<p>{{n.description}}</p>
+									<p class="newsdesc">{{n.description}}</p>
 									<a href="{% url "detail" n.id %}"
 									   class="btn btn-d button btn-rd">Подробнее</a>
 								</div>

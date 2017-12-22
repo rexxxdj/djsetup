@@ -35,4 +35,5 @@ def news_list(request):
 	return render(request, 'news.html', {'news': news})
 
 def news_detail(request, pk):
-	return render(request, 'news_det.html', {})
+	#return render(request, 'news_det.html', {'news':news.filter})
+	return HttpResponse('<h1>Detail news %s</h1>' % pk)
