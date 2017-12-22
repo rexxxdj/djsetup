@@ -7,5 +7,5 @@ from django.http import HttpResponse
 def news_list(request):
 	return render(request, 'news.html', {})
 
-def news_detail(request):
-	return render(request, 'news.html', {})
+def news_detail(request, pk):
+	return render(request, 'news_det.html', {})
