@@ -14,10 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import include, url
+from django.conf.urls.static import static
 from django.contrib import admin
 from mainpage import views as mainview
 from news import views as newsview
 from about import views as aboutview
+from djsetup import settings
 
 urlpatterns = [
 	url(r'^$', mainview.main_page, name='home'),
@@ -26,5 +28,6 @@ urlpatterns = [
     url(r'^news/(?P<pk>\d+)/', newsview.news_detail, name='detail'),
 	url(r'^about/', aboutview.about_form, name='about'),
 
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 	url(r'^admin/', admin.site.urls),    
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
