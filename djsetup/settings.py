@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CKEDITOR_CONFIGS = {
+'''CKEDITOR_CONFIGS = {
        'default': {
            'toolbar':[['Source', 'Link', 'Unlink', 'SpecialChar', 'Image', 'CodeSnippet']],
            'height': 400,
@@ -62,7 +62,7 @@ CKEDITOR_CONFIGS = {
            'removePlugins': 'stylesheetparser',
            'extraPlugins': 'codesnippet',
        },
-    }
+    }'''
 
 ROOT_URLCONF = 'djsetup.urls'
 
