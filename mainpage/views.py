@@ -24,6 +24,12 @@ def main_page(request):
 		 'description': 'Pioneer DJ выпустили новый контроллер для Rekordbox™DJ и Rekordbox DVS - DDJ-XP1, который имеет 32 пэда для тактильного управления точками Cues, Pad FX, Beat Jump, Sampler, Beat Loop и новыми функциями Key Shift и Keyboard, которые появились в новой версии Rekordbox™DJ 5.0. Больше информации доступно по ссылке ниже.',
 		 'image': 'img/map.jpg',
 		 'tags': '#tags #tags #tags'},
+		 {'id': 4,
+		 'tittle': u'Pioneer DJ DDJ-XP1',
+		 'date': '22.11.2017',
+		 'description': 'Pioneer DJ выпустили новый контроллер для Rekordbox™DJ и Rekordbox DVS - DDJ-XP1, который имеет 32 пэда для тактильного управления точками Cues, Pad FX, Beat Jump, Sampler, Beat Loop и новыми функциями Key Shift и Keyboard, которые появились в новой версии Rekordbox™DJ 5.0. Больше информации доступно по ссылке ниже.',
+		 'image': 'img/desk-equipment.jpg',
+		 'tags': '#tags #tags #tags'},
 	)
 
 
