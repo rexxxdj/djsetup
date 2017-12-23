@@ -57,18 +57,16 @@
 				<div class="container bloc-sm">
 					<div class="row">
 						<div class="col-xs-12 col-md-8 col-md-offset-2">
-							<h2 class="text-center mg-lg">{{news.description}}</h2>
+							<h2 class="text-center mg-lg">{{news.tittle}}</h2>
 							<img src="/static/img/lazyload-ph.png" 
-								 data-src="/static/img/desk-equipment.jpg" 
+								 data-src="{{news.image.url}}" 
 								 class="img-responsive mg-lg lazyload" />
-							<p class=" mg-lg">
-								Pioneer DJ выпустили новый контроллер для Rekordbox™DJ и Rekordbox DVS - DDJ-XP1, который имеет 32 пэда для тактильного управления точками Cues, Pad FX, Beat Jump, Sampler, Beat Loop и новыми функциями Key Shift и Keyboard, которые появились в новой версии Rekordbox™DJ 5.0. Больше информации доступно по ссылке ниже. <br>
-							</p>
+							<p class=" mg-lg">{{news.text|safe}}</p>
 							<div class="row">
 								<div class="col-sm-6">
-									<h4 class="mg-lg">#tags&nbsp;#tags #tags</h4></div>
+									<h4 class="mg-lg">{{news.tags}}</h4></div>
 								<div class="col-sm-6">
-									<h4 class="mg-sm text-right">09.12.2017</h4>
+									<h4 class="mg-sm text-right">{{news.date}}</h4>
 								</div>
 							</div>
 						</div>

@@ -17,16 +17,18 @@ from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.contrib import admin
 from mainpage import views as mainview
+#from mainpage.views import MainPage
 from news import views as newsview
 from about import views as aboutview
 from djsetup import settings
 
 urlpatterns = [
 	url(r'^$', mainview.main_page, name='home'),
-    url(r'^news/', include('news.urls', namespace="news")),
-	url(r'^news/', newsview.news_list, name='news'),
-    url(r'^news/(?P<pk>\d+)/', newsview.news_detail, name='detail'),
-	url(r'^about/', aboutview.about_form, name='about'),
+    #url(r'^$', MainPage.as_view(), name='home'),
+    #url(r'^news/', include('news.urls', namespace="news")),
+	url(r'^news/$', newsview.news_list, name='news'),
+    url(r'^news/(?P<pk>\d+)/$', newsview.news_detail, name='detail'),
+	url(r'^about/$', aboutview.about_form, name='about'),
 
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 	url(r'^admin/', admin.site.urls),    

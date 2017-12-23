@@ -6,10 +6,11 @@ from models import News
 
 
 def news_list(request):
-	news = News.objects.all()
+	news = News.objects.all().order_by('-pk')
 
 	return render(request, 'news.html', {'news': news})
 
 def news_detail(request, pk):
-	#return render(request, 'news_det.html', {'news':news.filter})
-	return HttpResponse('<h1>Detail news %s</h1>' % pk)
+	news = News.objects.get(pk=pk)
+	return render(request, 'news_det.html', {'news':news})
+	#return HttpResponse('<h1>Detail news %s</h1>' % news.description)
