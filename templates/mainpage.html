@@ -81,7 +81,7 @@
 					<div class="row">
 						<div class="col-xs-12 col-md-8 col-md-offset-2">
 							<img src="{% static "img/lazyload-ph.png" %}"
-								 data-src="{% static n.image %}" 
+								 data-src="{{n.image.url}}" 
 								 class="img-responsive lazyload" />
 							<h2 class="mg-sm">{{n.tittle}}</h2>
 							<div class="row">
