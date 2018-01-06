@@ -25,11 +25,8 @@ from djsetup import settings
 
 urlpatterns = [
 	url(r'^$', mainview.main_page, name='home'),
-    #url(r'^$', MainPage.as_view(), name='home'),
-    #url(r'^news/', include('news.urls', namespace="news")),
 	url(r'^news/$', newsview.news_list, name='news'),
     url(r'^news/(?P<pk>\d+)/$', newsview.news_detail, name='detail'),
-	#url(r'^about/$', aboutview.about_form, name='about'),
     url(r'^about/$', FeedbackView.as_view(), name='about'),
 
 
