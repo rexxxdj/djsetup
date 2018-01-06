@@ -25,7 +25,7 @@ SECRET_KEY = '%tx0iqq!$9o%tt)x7+57%)-2jif5!76jgp1+l9j17^grv1#ykb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['localhost', '127.0.0.1',]
 
 
 # Application definition
@@ -65,6 +65,10 @@ MIDDLEWARE = [
     }'''
 
 ROOT_URLCONF = 'djsetup.urls'
+
+'''ADMINS = (
+            ("admin", "djrexxx87@gmail.com")
+        )'''
 
 TEMPLATES = [
     {
@@ -203,3 +207,6 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 CKEDITOR_UPLOAD_PATH = 'uploads/'
+
+RECAPTCHA_PUBLIC_KEY = 'DJsEtUp2018'
+RECAPTCHA_PRIVATE_KEY = 'DJsEtUp2018PrivateKey'

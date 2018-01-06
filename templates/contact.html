@@ -15,7 +15,6 @@
 		<script src="{% static "js/bootstrap.js" %}"></script>
 		<script src="{% static "js/blocs.js" %}"></script>
 		<script src="{% static "js/jqBootstrapValidation.js" %}"></script>
-		<script src="{% static "js/formHandler.js" %}"></script>
 		<script src="{% static "js/lazysizes.min.js" defer %}"></script>
 	    <title>About - DJSETUP</title>    
 	<!-- Google Analytics --> 
@@ -23,7 +22,7 @@
 	</head>
 	<body>
 	<!-- Main container -->
-		<div class="page-container">    
+		<div class="page-container">  
 		<!-- bloc-0 -->
 			<div class="bloc l-bloc bgc-white none " id="bloc-0">
 				<div class="container">
@@ -96,27 +95,28 @@
 									</p>
 								</div>
 								<div class="col-sm-6">
-									<form id="form_1" 
-										  novalidate success-msg="Your message has been sent." 
-										  fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!">
-										<div class="form-group">
-											<label>Имя<br></label>
-											<input id="name" class="form-control" required />
-										</div>
-										<div class="form-group">
-											<label>Email</label>
-											<input id="email" class="form-control" type="email" required />
-										</div>
-										<div class="form-group">
-											<label>Сообщение</label>
-											<textarea id="message" class="form-control" rows="4" cols="50" required></textarea>
-										</div>
-										<div class="text-center">
+								{% if messages %}
+						      		</br> 
+						      		<div class="alert alert-success" role="alert">
+						        		{% for message in messages %}
+						          			{{ message }}
+						        		{% endfor %}  
+						      		</div>
+						      	{% else %}
+						      		<form method="post">
+						                {% csrf_token %} 
+						                {{ form.as_p}}
+										<div class="mbr-buttons mbr-buttons--right">
+                  							<button type="submit" class="mbr-buttons__btn btn btn-lg btn-primary">SEND</button>
+                						</div>
+										<!--<div class="text-center">
 											<button type="submit" 
 													class="bloc-button btn btn-d btn-lg button btn-block btn-rd">Отправить<br>
 											</button>
-										</div>
+										</div>-->
 									</form>
+						    	{% endif %}  
+									
 								</div>
 							</div>
 						</div>
