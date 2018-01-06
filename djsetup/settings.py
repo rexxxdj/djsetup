@@ -54,21 +54,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-'''CKEDITOR_CONFIGS = {
-       'default': {
-           'toolbar':[['Source', 'Link', 'Unlink', 'SpecialChar', 'Image', 'CodeSnippet']],
-           'height': 400,
-           'width': 900,
-           'removePlugins': 'stylesheetparser',
-           'extraPlugins': 'codesnippet',
-       },
-    }'''
-
 ROOT_URLCONF = 'djsetup.urls'
-
-'''ADMINS = (
-            ("admin", "djrexxx87@gmail.com")
-        )'''
 
 TEMPLATES = [
     {
@@ -88,8 +74,6 @@ TEMPLATES = [
 
 CKEDITOR_CONFIGS = {
     'default': {
-        #'skin': 'moono',
-        #'skin': 'office2013',
         'toolbar_Basic': [
             ['Source', '-', 'Bold', 'Italic']
         ],
@@ -123,24 +107,15 @@ CKEDITOR_CONFIGS = {
 
             ]},
         ],
-        'toolbar': 'YourCustomToolbarConfig',  # put selected toolbar config here
-        # 'toolbarGroups': [{ 'name': 'document', 'groups': [ 'mode', 'document', 'doctools' ] }],
-        # 'height': 291,
-        # 'width': '100%',
-        # 'filebrowserWindowHeight': 725,
-        # 'filebrowserWindowWidth': 940,
-        # 'toolbarCanCollapse': True,
-        # 'mathJaxLib': '//cdn.mathjax.org/mathjax/2.2-latest/MathJax.js?config=TeX-AMS_HTML',
+        'toolbar': 'YourCustomToolbarConfig',  
         'tabSpaces': 4,
         'extraPlugins': ','.join([
-            'uploadimage', # the upload image feature
-            # your extra plugins here
+            'uploadimage',
             'div',
             'autolink',
             'autoembed',
             'embedsemantic',
             'autogrow',
-            # 'devtools',
             'widget',
             'lineutils',
             'clipboard',
@@ -208,5 +183,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 
-RECAPTCHA_PUBLIC_KEY = 'DJsEtUp2018'
-RECAPTCHA_PRIVATE_KEY = 'DJsEtUp2018PrivateKey'
+try:
+    from .settings_prod import *
+except:
+    pass
+
