@@ -6,7 +6,7 @@ from about.models import Feedback
 
 class FeedbackAdmin(admin.ModelAdmin):
 	model = Feedback
-	list_display = ( 'name', 'from_email', 'create_date',)
+	list_display = ( 'name', 'from_email','subject', 'create_date',)
 
 
 admin.site.register(Feedback, FeedbackAdmin)

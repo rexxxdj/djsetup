@@ -27,10 +27,13 @@
 					      	{% else %}
 					      		<form method="post">
 					                {% csrf_token %} 
-					                {{ form.as_p}}
-									<div class="mbr-buttons mbr-buttons--right">
-                 						<button type="submit" class="mbr-buttons__btn btn btn-lg btn-primary">SEND</button>
-                					</div>
+					                {{form.as_div}}
+									<div class="text-center">
+										<button type="submit" 
+												class="bloc-button btn btn-d btn-lg button btn-block btn-rd">
+											Отправить<br>
+										</button>
+									</div>
 								</form>
 						    {% endif %}  								
 						</div>
