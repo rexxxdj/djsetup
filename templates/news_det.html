@@ -7,9 +7,14 @@
 			<div class="row">
 				<div class="col-xs-12 col-md-8 col-md-offset-2">
 					<h2 class="text-center mg-lg">{{news.tittle}}</h2>
-					<img src="/static/img/lazyload-ph.png" 
-						 data-src="{{news.image.url}}" 
-						 class="img-responsive mg-lg lazyload" />
+					{% if news.image %}
+						<img src="{% static "img/lazyload-ph.png" %}"
+							 data-src="{{news.image.url}}" 
+							 class="img-responsive lazyload" />
+					{% else %}
+						<img src="{% static "img/logo.png" %}"
+							 class="img-responsive lazyload" />
+					{% endif %}
 					<div class="row">
 						<div class="col-sm-6">
 							<h4 class="mg-lg">{{news.tags}}</h4>
