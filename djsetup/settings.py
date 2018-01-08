@@ -187,9 +187,8 @@ MEDIA_URL = '/media/'
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 
 
-'''try:
+try:
     from .settings_prod import *
 except:
    pass
 
-'''
