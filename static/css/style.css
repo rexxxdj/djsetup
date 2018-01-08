@@ -571,3 +571,10 @@ h3{
         background-size: auto 200%;
     }
 }
+
+a:hover, .icon:hover{
+	color: #00549f!important;
+}
+.icon{
+	color: #222222!important;
+}
