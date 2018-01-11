@@ -23,6 +23,7 @@
 		</div>
 	</div>
 	{% for n in news %}
+	<a href="{% url "detail" n.id %}">
 		<div class="bloc bgc-white l-bloc" id="bloc-3">
 			<div class="container bloc-sm">
 				<div class="row">
@@ -46,6 +47,7 @@
 				</div>
 			</div>
 		</div>	
+	</a>
 	{% endfor %}
 	<div class="bloc bgc-white l-bloc" id="bloc-6">
 		<div class="container bloc-sm">
