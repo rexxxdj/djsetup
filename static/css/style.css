@@ -611,5 +611,5 @@ img[tabindex="0"]:focus,  /* убрать строку, если не нужно
 img[tabindex="0"]:focus ~ * {
   pointer-events: none;
   cursor: zoom-out;
-  padding-bottom: 0px;
+  padding: 0px;
 }
