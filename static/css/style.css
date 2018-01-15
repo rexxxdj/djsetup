@@ -319,14 +319,21 @@ h4{
 }
 .button{
 	font-family:"helvetica";
-	color:#FFFFFF!important;
-	background-color:#00549F;
+	color:#00549F!important;
+	background-color:white;
 	background-clip:padding-box!important;
 	-webkit-background-clip:padding-box!important;
 	text-align:center;
 	font-weight:normal;
 	text-transform:none;
+	border: 2px solid #00549F;
 }
+.button:active{
+	background-color: #00549F;
+	color: white!important;
+	border: 2px solid #00549F;
+}
+
 h2{
 	font-size:24px;
 }
