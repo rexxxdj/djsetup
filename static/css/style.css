@@ -329,9 +329,9 @@ h4{
 	border: 2px solid #00549F;
 }
 .button:active, .button:hover{
-	background-color: #00549F;
+	background: #00549F;
 	color: white!important;
-	border: 2px solid #00549F;
+	background-clip: border-box!important;
 }
 
 h2{
