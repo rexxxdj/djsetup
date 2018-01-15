@@ -591,3 +591,11 @@ img.img-responsive.lazyloaded {
 .img-responsive{
     padding-bottom: 10px;
 }
+
+.img-responsive:hover{
+	cursor: zoom-in;
+}
+
+.lb-image:hover{
+	cursor:zoom-out;
+}
