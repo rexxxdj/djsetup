@@ -5,7 +5,7 @@
 
 body{
 	margin:0;
-	padding:0;
+	padding:8px;
     background:#FFF;
     overflow-x:hidden;
     -webkit-font-smoothing: antialiased;
