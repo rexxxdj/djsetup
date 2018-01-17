@@ -16,7 +16,11 @@
 	    <meta name="description" content="">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 	    <link rel="shortcut icon" type="image/png" href="{% static "img/favicon.png" %}">    
-		<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}">
+		<!--<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}">-->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+			  rel="stylesheet" 
+			  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+			  crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
 		<link rel="stylesheet" type="text/css" href="{% static "css/font-awesome.min.css" %}">
 		<link href='https://fonts.googleapis.com/css?family=Droid+Sans&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'> 
@@ -119,10 +123,13 @@
 		</div>
 	<!-- Main container END -->
 		<!--<script src="{% static "js/jquery-2.1.0.js" %}"></script>-->
-		<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+		<!--<script src="https://code.jquery.com/jquery-2.2.4.min.js"
   				integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-  				crossorigin="anonymous"></script>
-		<script src="{% static "js/bootstrap.js" %}"></script>
+  				crossorigin="anonymous"></script>-->
+		<!--script src="{% static "js/bootstrap.js" %}"></script>-->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+				integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+				crossorigin="anonymous"></script>
 		<script src="{% static "js/blocs.js" %}"></script>
 		<script src="{% static "js/lazysizes.min.js" %}" defer></script>
 		{% block externalscrypt %}{% endblock%}
