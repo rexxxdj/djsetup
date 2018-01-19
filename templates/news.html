@@ -13,11 +13,11 @@
 									{% if n.image %}
 										<img src="{% static "img/lazyload-ph.png" %}"
 											 data-src="{{n.image.url}}" 
-											 class="img-responsive lazyload" />
+											 class="img-responsive lazyload stat-img"/>
 									{% else %}
 										<img src="{% static "img/logo.png" %}"
-											 class="img-responsive lazyload" 
-											 style="width: 465px; height: 310px"/>
+											 class="img-responsive lazyload stat-img" 
+											 style="width: 465px; height: 350px"/>
 									{% endif %}
 								</a>
 								<h3 class="mg-md">{{n.tittle}}</h3>
@@ -28,17 +28,6 @@
 								   class="btn btn-d button btn-rd">Подробнее</a>
 							</div>
 						{% endfor %}
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>	
-	<div class="bloc bgc-white l-bloc" id="bloc-18">
-		<div class="container bloc-sm">
-			<div class="row">
-				<div class="col-xs-4 col-xs-offset-4">
-					<div class="text-center">
-						<a href="/" class="btn btn-d button btn-block btn-rd">Загрузить еще<br></a>
 					</div>
 				</div>
 			</div>
