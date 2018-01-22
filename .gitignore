@@ -1,3 +1,7 @@
 *.pyc
 settings_prod.py
 media/
+djsetup/bin/
+djsetup/include/
+djsetup/lib/
+djsetup/local/
