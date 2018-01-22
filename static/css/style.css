@@ -63,7 +63,7 @@ button{outline:none!important;}
 h1,h2,h3,h4,h5,h6,p,label,.btn,a{font-family:"Helvetica";color:#222222!important;}
 .container{max-width:960px;}
 h4{font-family:"Droid Sans";font-weight:100;font-size:14px;color:#00549F!important;}
-.button{font-family:"helvetica";color:#00549F!important;background-color:white;background-clip:padding-box!important;-webkit-background-clip:padding-box!important;text-align:center;font-weight:normal;text-transform:none;border:2px solid #00549F;}
+.button{font-family:"helvetica";color:#00549F!important;background-color:white;background-clip:padding-box!important;-webkit-background-clip:padding-box!important;text-align:center;font-weight:normal;text-transform:none;border:2px solid #00549F;margin-left: 5px;}
 .button:active, .button:hover{background:#00549F;color:white!important;background-clip:border-box!important;}
 h2{font-size:24px;}
 .icon{background-color:transparent;border-color:rgba(0,2,255,0.0);color:#00549F!important;text-align:center;text-transform:none;}
