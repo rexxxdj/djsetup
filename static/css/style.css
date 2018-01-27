@@ -636,7 +636,7 @@ img.img-responsive.lazyloaded{padding-top:15px;padding-bottom:15px;}
 .img-main:hover{cursor: pointer;}
 .eye{margin-top: 5px;}
 @media (max-width:768px){.eye{margin-left: 0px;margin-bottom: 0px;}}
-@media (max-width:768px){.ion-eye{float: left!important;padding-left: 10px;padding-right: 5px;}}
+@media (max-width:768px){.ion-eye{float: left!important;padding-left: 24px;padding-right: 5px;}}
 @media (max-width:768px){.button{margin-left:10px;}}
 .stat-img{width: 465px; height: 300px;}
 @media (max-width:768px){.stat-img{width: 100%; height: 100%;padding-left: 5px;padding-right: 10px;}}
@@ -656,3 +656,7 @@ h3 {
 }
 .tittle{padding-top: 20px;}
 .newshead{margin:0px;padding-left: 15px;}
+@media(max-width: 768px){.tittle{text-align: center;}}
+.col-xs-12 {
+    padding-left: 15px;
+}
