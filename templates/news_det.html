@@ -5,27 +5,30 @@
 {% endblock%}
 {% block title %}{{news.tittle}} - DJSETUP{% endblock%}
 {% block content %}
-	<div class="bloc bgc-white l-bloc " id="bloc-19">
+<div class="bloc bg-lines-dl2-bg bg-repeat l-bloc ">
 		<div class="container bloc-sm">
-			<div class="row">
+			<div class="row animSpeedFast">
 				<div class="col-xs-12 col-md-8 col-md-offset-2">
-					<h2 class="text-center mg-lg">{{news.tittle}}</h2>
-					{% if news.image %}
-						<img src="{{news.image.url}}"
-							 class="img-responsive lazyload" />				 
-					{% else %}
-						<img src="{% static "img/logo.png" %}"
-							 class="img-responsive lazyload" />		
-					{% endif %}
+					<h2 class="text-center mg-lg"><strong>{{news.tittle}}</strong></h2>
 					<div class="row">
-						<div class="col-sm-6">
-							<h4 class="mg-lg">{{news.tags}}</h4>
-						</div>
-						<div class="col-sm-6">
-							<h4 class="mg-sm text-right">{{news.date}}</h4>
+						<div class="col-sm-12">
+							<div class="row detbighead">
+								<div class="col-sm-6 col-xs-6">
+									<h4 class="mg-sm text-left">{{news.date|date:"d E Y"|upper}}</h4>
+								</div>
+								<div class="col-sm-6 col-xs-6">
+									<h4 class="mg-sm text-left">| Автор: Paper_JAM</h4>
+								</div>
+							</div>
 						</div>
 					</div>
-					<p class=" mg-lg">{{news.text|safe}}</p>							
+					{% if news.image %}
+					<img src="{{news.image.url}}" class="img-responsive mg-sm" />
+					{% else %}
+						<img src="{% static "img/logo2.png" %}"
+							 class="img-responsive mg-sm"/>
+					{% endif %}
+					<p class=" mg-lg">{{news.text|safe}}</p>
 				</div>
 			</div>
 		</div>

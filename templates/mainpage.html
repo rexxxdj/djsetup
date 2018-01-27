@@ -30,14 +30,14 @@
 <!-- bloc-21 -->
 {% for n in news %}
 <a href="{% url "detail" n.id %}">
-	<div class="bloc bg-lines-dl2-bg bg-repeat l-bloc " id="bloc-21">
+	<div class="bloc bg-lines-dl2-bg bg-repeat l-bloc ">
 		<div class="container bloc-sm">
 			<div class="row animSpeedFast">
 				<div class="col-xs-12 col-md-8 col-md-offset-2">
-					<h2 class="mg-sm "><strong>{{n.tittle}}</strong></h2>
-					<div class="row">
+					<h2 class="mg-sm tittle"><strong>{{n.tittle}}</strong></h2>
+					<div class="row smallhead">
 						<div class="col-sm-12">
-							<div class="row">
+							<div class="row bighead">
 								<div class="col-sm-3">
 									<h4 class="mg-sm text-left">{{n.date|date:"d E Y"|upper}}</h4>
 								</div>
