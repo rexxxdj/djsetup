@@ -41,6 +41,11 @@ class News(models.Model):
 		verbose_name=u"Дата создания",
 		null=False)
 
+	score = models.IntegerField(
+		blank=True,
+		default=0,
+		verbose_name=u"Количество просмотров")
+
 
 	def __unicode__(self):
 		return u"%s %s %s" % (self.pk, self.tittle, self.date)
