@@ -49,7 +49,7 @@ class News(models.Model):
 
 	author = models.ForeignKey(
 		User,
-		default=1)
+		default=2)
 
 
 	def __unicode__(self):
