@@ -49,12 +49,33 @@
 									<a href="{% url "detail" n.id %}"
 								   	   class="btn btn-d button btn-rd">Подробнее</a>
 								</div>
-							{% endfor %}
+							{% endfor %}							
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="text-center">
+		<ul class="pagination text-center">
+			{% if news.has_previous %}
+		    	<li><a href="?page={{ news.previous_page_number }}">&laquo;</a></li>
+		    {% else %}
+		    	<li class="disabled"><span>&laquo;</span></li>
+		    {% endif %}
+		    {% for i in news.paginator.page_range %}
+		    	{% if news.number == i %}
+		        	<li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+		      	{% else %}
+		        	<li><a href="?page={{ i }}">{{ i }}</a></li>
+		      	{% endif %}
+		    {% endfor %}
+		    {% if news.has_next %}
+		    	<li><a href="?page={{ news.next_page_number }}">&raquo;</a></li>
+		    {% else %}
+		    	<li class="disabled"><span>&raquo;</span></li>
+		    {% endif %}
+		</ul>
 	</div>
 {% endblock %}
