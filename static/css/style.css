@@ -660,6 +660,6 @@ h3 {
 .col-xs-12 {padding-left: 15px;}
 .smallhead{padding-left: 25px;}
 .bighead {margin-left: -10px;margin-right: 0px;}
-.detbighead {margin-left: 14px;}
+.detbighead {margin-left: 14px;margin-right: 0px;}
 .icon-md{padding-left: 20px;}
 @media(max-width: 768px){.text-right {text-align: left;}}

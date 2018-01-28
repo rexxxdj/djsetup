@@ -13,12 +13,10 @@
 					<div class="row">
 						<div class="col-sm-12">
 							<div class="row detbighead">
-								<div class="col-sm-6 col-xs-6">
-									<h4 class="mg-sm text-left">{{news.date|date:"d E Y"|upper}}</h4>
+								<div class="col-sm-9">
+									<h4 class="mg-sm text-left">{{news.date|date:"d E Y"|upper}}| Автор: {{news.author.username}}</h4>
 								</div>
-								<div class="col-sm-6 col-xs-6">
-									<h4 class="mg-sm text-left">| Автор: {{news.author.username}}</h4>
-								</div>
+								<div class="col-sm-3"><h4 class="mg-sm text-right">{{news.tags}}</h4></div>
 							</div>
 						</div>
 					</div>
