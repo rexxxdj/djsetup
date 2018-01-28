@@ -9,7 +9,7 @@ from models import News
 
 def news_list(request):
 	news_list = News.objects.all().order_by('-pk')
-	paginator = Paginator(news_list, 4) # Show 4 news per page
+	paginator = Paginator(news_list, 8) # Show 4 news per page
 
 	page = request.GET.get('page')
 	try:
