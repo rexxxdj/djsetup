@@ -634,7 +634,7 @@ img.img-responsive.lazyloaded{padding-top:15px;padding-bottom:15px;}
 .bg-repeat {background: repeat;}
 .bg-lines-dl2-bg{background-image:url("img/lines-dl2-bg.png");}
 .img-main:hover{cursor: pointer;}
-.eye{margin-top: 5px;}
+.eye{margin-top: 5px;margin-left: 3px;}
 @media (max-width:768px){.eye{margin-left: 0px;margin-bottom: 0px;}}
 @media (max-width:768px){.ion-eye{float: left!important;padding-left: 24px;padding-right: 5px;}}
 @media (max-width:768px){.button{margin-left:10px;}}
@@ -659,5 +659,7 @@ h3 {
 @media(max-width: 768px){.tittle{text-align: center;}}
 .col-xs-12 {padding-left: 15px;}
 .smallhead{padding-left: 25px;}
-.bighead {margin-left: -10px;}
+.bighead {margin-left: -10px;margin-right: 0px;}
 .detbighead {margin-left: 14px;}
+.icon-md{padding-left: 20px;}
+@media(max-width: 768px){.text-right {text-align: left;}}

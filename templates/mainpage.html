@@ -38,23 +38,20 @@
 					<div class="row smallhead">
 						<div class="col-sm-12">
 							<div class="row bighead">
-								<div class="col-sm-3">
-									<h4 class="mg-sm text-left">{{n.date|date:"d E Y"|upper}}</h4>
-								</div>
-								<div class="col-sm-3">
-									<h4 class="mg-sm text-left">| Автор: {{n.author.username}}</h4>
+								<div class="col-sm-5">
+									<h4 class="mg-sm text-left">{{n.date|date:"d E Y"|upper}}| Автор: {{n.author.username}}</h4>
 								</div>
 								<div class="col-sm-3">
 									<div class="row">
-										<div class="col-sm-6">
-											<span class="ion ion-eye icon-md pull-right"></span>
+										<div class="col-sm-3">
+											<span class="ion ion-eye icon-md"></span>
 										</div>
-										<div class="col-sm-6">
-											<p class="mg-md eye">{{n.score}}</p>
+										<div class="col-sm-4">
+											<p class="eye">{{n.score}}</p>
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-3"><h4 class="mg-sm text-left">{{n.tags}}</h4></div>
+								<div class="col-sm-4"><h4 class="mg-sm text-right">{{n.tags}}</h4></div>
 							</div>
 						</div>
 					</div>
