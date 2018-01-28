@@ -663,3 +663,5 @@ h3 {
 .detbighead {margin-left: 14px;margin-right: 0px;}
 .icon-md{padding-left: 20px;}
 @media(max-width: 768px){.text-right {text-align: left;}}
+.news{min-height: 650px;}
+@media(max-width: 768px){.news{min-height: 1px;}}
