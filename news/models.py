@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+from django.contrib.auth.models import User
 from django.db import models
 from ckeditor_uploader.fields import RichTextUploadingField
 
@@ -45,6 +46,10 @@ class News(models.Model):
 		blank=True,
 		default=0,
 		verbose_name=u"Количество просмотров")
+
+	author = models.ForeignKey(
+		User,
+		default=1)
 
 
 	def __unicode__(self):
